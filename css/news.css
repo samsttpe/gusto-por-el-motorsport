@@ -1,5 +1,4 @@
-
- .news-container {
+.news-container {
     display: flex;
     flex-wrap: wrap;    
     justify-content: space-between;
@@ -8,7 +7,6 @@
     margin: 0 auto;
     padding: 20px;
 }
-
 
 .news-card {
     flex: 1 1 calc(33.33% - 20px);  
@@ -20,12 +18,10 @@
     text-align: center;
 }
 
-
 .news-card:hover {
     transform: translateY(-10px);  
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
-
 
 .news-card img {
     width: 100%;
@@ -33,7 +29,6 @@
     object-fit: cover;  
     transition: opacity 0.3s;
 }
-
 
 .news-card img:hover {
     opacity: 0.85; 
@@ -46,13 +41,11 @@
     margin: 15px 0;
 }
 
-
 .news-description {
     font-size: 16px;
     color: #555;
     margin: 0 15px 15px;
 }
-
 
 .btn-read-more {
     display: inline-block;
@@ -68,12 +61,10 @@
     background: darkgoldenrod; 
 }
 
-
-
 .btn-back {
     display: inline-block;
     padding: 5px 10px;
-    background:darkgoldenrod;  
+    background: darkgoldenrod;  
     color: white;
     text-decoration: none;
     font-size: medium;
@@ -86,14 +77,54 @@
 
 .btn-back:hover {
     background: darkgoldenrod;  
-    transform: scale(1.05);}
-    
+    transform: scale(1.05);
+}
 
+.titulomedio {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: medium;
+}
 
-.titulomedio{font-family: Arial, Helvetica, sans-serif;
-text-align: center;
-font-size: medium;}
+.titulopeque {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    text-align: center;
+}
 
-.titulopeque{font-family: Arial, Helvetica, sans-serif;
-font-size: small;
-text-align: center;}
+/* ------------------------ */
+/* ESTILOS RESPONSIVOS     */
+/* ------------------------ */
+@media (max-width: 992px) {
+    .news-card {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 600px) {
+    .news-card {
+        flex: 1 1 100%;
+    }
+
+    .news-card img {
+        height: 150px;
+    }
+
+    .news-title {
+        font-size: 18px;
+    }
+
+    .news-description {
+        font-size: 14px;
+    }
+
+    .btn-read-more {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+
+    .btn-back {
+        font-size: 14px;
+        padding: 4px 8px;
+    }
+}
